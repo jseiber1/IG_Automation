@@ -16,6 +16,9 @@ class InstaBot:
         self.driver.find_element_by_xpath("//button[contains(text(), 'Not Now')]").click()
         sleep(4)
         self.driver.find_element_by_class_name('Ckrof').click()
-        sleep(5)
+        sleep(3)
+        for x in range(200):
+            self.driver.find_element_by_class_name('coreSpriteRightChevron').click()
+            sleep(1)
 
 InstaBot('jenn.seibert', pw)
